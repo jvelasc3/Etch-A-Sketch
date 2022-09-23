@@ -1,0 +1,44 @@
+#board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 400px;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.grid {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 40px !important;
+  color: burlywood !important;
+  font-family: cursive !important;
+  margin-top: 10px !important;
+}
+
+button {
+  border-radius: 20px !important;
+}
+
+.footer button {
+  width: 100px;
+}

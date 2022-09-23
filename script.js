@@ -1,5 +1,7 @@
+let color = "black";
+
 document.addEventListener("DOMContentLoaded", () => {
-  makeGrid(2);
+  makeGrid(16);
 
   let btn_popup = document.querySelector("#btn_popup");
   btn_popup.addEventListener("click", () => {
@@ -15,6 +17,7 @@ function makeGrid(size) {
 
   for (let i = 0; i < size * size; i++) {
     let div = document.createElement("div");
+    div.addEventListener("mouseover", colorDiv);
     grid.insertAdjacentElement("beforeend", div);
   }
 }
@@ -28,7 +31,21 @@ function gridSize() {
   } else if (input < 0 || input > 100) {
     message.innerHTML = "Error: Value must be between 1-100";
   } else {
-    message.innerHTML = `Success! Grid Size: ${input} x ${input}`;
+    message.innerHTML = `New Grid Size: ${input} x ${input}`;
     return input;
   }
+}
+
+function colorDiv() {
+  if (color == "rainbow") {
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+  } else if (color == "eraser") {
+    this.style.backgroundColor = "white";
+  } else {
+    this.style.backgroundColor = "black";
+  }
+}
+
+function setColor(colorChoice) {
+  color = colorChoice;
 }

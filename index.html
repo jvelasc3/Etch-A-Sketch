@@ -17,7 +17,7 @@
     <div id="board">
       <h1>Etch-A-Sketch</h1>
       <div class="header">
-        <h6>Select Size:</h6>
+        <h6>Default Grid Size: 16x16</h6>
         <button type="button" class="btn btn-primary" id="btn_popup">
           Change Grid Size
         </button>
@@ -25,10 +25,26 @@
       <p id="message"></p>
       <div class="grid"></div>
       <div class="footer">
-        <button type="button" class="btn btn-dark">Black</button>
-        <button type="button" class="btn btn-warning">Raindow</button>
-        <button type="button" class="btn btn-danger">Ereaser</button>
-        <button type="button" class="btn btn-info">Clear</button>
+        <button type="button" class="btn btn-dark" onclick="setColor('black')">
+          Black
+        </button>
+        <button
+          type="button"
+          class="btn btn-warning"
+          onclick="setColor('rainbow')"
+        >
+          Raindow
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          onclick="setColor('eraser')"
+        >
+          Eraser
+        </button>
+        <button type="button" class="btn btn-info" onclick="reset()">
+          Clear
+        </button>
       </div>
     </div>
     <script src="script.js"></script>

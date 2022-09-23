@@ -28,7 +28,6 @@
   width: 500px;
   height: 500px;
   border: 1px solid black;
-  margin: 20px;
   display: grid;
 }
 
@@ -45,4 +44,8 @@ button {
 
 .footer button {
   width: 100px;
+}
+
+#message {
+  color: red;
 }

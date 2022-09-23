@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     let draw = document.querySelector("#draw");
     if (click) {
-      draw.innerHTML = "Drawing Activated!";
+      draw.innerHTML = "Drawing Activated! -click ";
     } else {
-      draw.innerHTML = "Drawing Deactivated!";
+      draw.innerHTML = "Drawing Deactivated! -click";
     }
   });
 

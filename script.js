@@ -1,7 +1,20 @@
 let color = "black";
+let click = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   makeGrid(16);
+
+  document.querySelector("body").addEventListener("click", (e) => {
+    if (e.target.tagName != "BUTTON") {
+      click = !click;
+    }
+    let draw = document.querySelector("#draw");
+    if (click) {
+      draw.innerHTML = "Drawing Activated!";
+    } else {
+      draw.innerHTML = "Drawing Deactivated!";
+    }
+  });
 
   let btn_popup = document.querySelector("#btn_popup");
   btn_popup.addEventListener("click", () => {
@@ -37,12 +50,14 @@ function gridSize() {
 }
 
 function colorDiv() {
-  if (color == "rainbow") {
-    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-  } else if (color == "eraser") {
-    this.style.backgroundColor = "white";
-  } else {
-    this.style.backgroundColor = "black";
+  if (click) {
+    if (color == "rainbow") {
+      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else if (color == "eraser") {
+      this.style.backgroundColor = "white";
+    } else {
+      this.style.backgroundColor = "black";
+    }
   }
 }
 

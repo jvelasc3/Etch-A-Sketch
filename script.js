@@ -49,3 +49,10 @@ function colorDiv() {
 function setColor(colorChoice) {
   color = colorChoice;
 }
+
+function reset() {
+  let divs = document.querySelectorAll("div");
+  divs.forEach((div) => {
+    div.style.backgroundColor = "white";
+  });
+}
